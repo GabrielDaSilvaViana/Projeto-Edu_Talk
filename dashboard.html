@@ -6,6 +6,7 @@
     <title>Edu Talk</title>
     <link rel="stylesheet" href="CSS/dashboard.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="CSS/notes.css">
 </head>
 <body>
     <div class="app-container">
@@ -74,6 +75,18 @@
         </aside>
 
         <main class="chat-window">
+
+
+            <aside class="notes-panel" id="notes-panel" style="display:none;">
+                <header class="notes-header">
+                  <h3>Anotações</h3>
+                  <button id="close-notes-btn">X</button>
+                </header>
+                <textarea id="notes-textarea" placeholder="Digite suas anotações aqui..."></textarea>
+                <button id="save-notes-btn">Salvar</button>
+              </aside>
+              
+
             <header class="chat-header">
                 <div class="chat-contact-info">
                     <img src="https://i.pravatar.cc/40?u=alex" alt="Alex Johnson Avatar" class="avatar" id="chat-avatar">
@@ -200,7 +213,33 @@
             <button class="popup-btn" id="save-settings-btn">Salvar Configurações</button>
         </div>
     </div>
-
+    <div class="active-popup" id="active-popup">
+        <h3 class="active-popup-title">Usuários Ativos</h3>
+        <div id="active-list-container">
+            <div class="active-item">
+                <img src="https://i.pravatar.cc/40?u=active1" alt="Active Avatar" class="avatar">
+                <div class="active-info">
+                    <strong>Maria Silva</strong>
+                    <span>Online</span>
+                </div>
+            </div>
+             <div class="active-item">
+                <img src="https://i.pravatar.cc/40?u=active2" alt="Active Avatar" class="avatar">
+                <div class="active-info">
+                    <strong>Pedro Souza</strong>
+                    <span>Ausente</span>
+                </div>
+            </div>
+             <div class="active-item">
+                <img src="https://i.pravatar.cc/40?u=active3" alt="Active Avatar" class="avatar">
+                <div class="active-info">
+                    <strong>Ana Costa</strong>
+                    <span>Online</span>
+                </div>
+            </div>
+            </div>
+    </div>
+    <script src="JS/notes.js"></script>
     <script src="JS/dashboard.js"></script>
 </body>
 </html>
